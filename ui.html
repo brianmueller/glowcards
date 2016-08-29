@@ -16,9 +16,9 @@
 
     <script>
         $(function() {
-            var html1 = '<div class="card"><div class="front side">';
-            var html2 = '</div><div class="back side">';
-            var html3 = '</div></div>';
+            var html1 = '<div class="card"><div class="front side"><strong>';
+            var html2 = '</strong></div><div class="back side"><em>';
+            var html3 = '</em></div></div>';
             var deckLength = 10;
             for (var i = 0; i < deckLength; i++) {
                 $("#deck").append(html1 + "a" + i + html2 + "b" + i + html3);
@@ -88,10 +88,13 @@
                 e.preventDefault(); // prevent the default action (scroll / move caret)
             });
 
-            // $(".card").swipe({
-            //     swipeLeft: flip,
-            //     allowPageScroll: "none"
-            // });
+            $(".card").swipe({
+                swipeLeft: flip,
+                swipeRight: flip,
+                swipeUp: next,
+                swipeDown: previous,
+                allowPageScroll: "none"
+            });
             // $(".card").swipe({
             //     swipeRight: flip,
             //     allowPageScroll: "none"
@@ -124,6 +127,10 @@
             top: 0;
             left: 0;
             background: white;
+        }
+        
+        nav {
+            z-index: 100;
         }
         
         nav .glyphicon {
