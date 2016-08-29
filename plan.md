@@ -2,7 +2,6 @@
 * test UI
   * left/right next side
   * down(next)/up(prev) card
-  * use two arrays a=[a0..a9] and b=[b0..b9]
 * MVP
   * model: user (first name, last name, email, password)
     * has_many :decks
@@ -30,6 +29,7 @@
     * get '/decks/:id'
     * get '/decks/:id/edit'
 * stage 2
+  * update view: show_deck to include buttons to daily/weekly/monthly with one active
   * view: edit_deck
   * controller: decks_controller
     * get '/decks/:id/edit'
