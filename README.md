@@ -1,7 +1,7 @@
 # glowCards plan
-* test UI
-  * left/right next side
-  * down(next)/up(prev) card
+* ~~test UI~~
+  * ~~left/right next side~~
+  * ~~down(next)/up(prev) card~~
 * MVP
   * model: user (first name, last name, email, password)
     * has_many :decks
@@ -9,10 +9,10 @@
   * model: deck (deck_name, user_id)
     * belongs_to :user
     * has_many :cards
-  * model: card (side_a, side_b, rotation, index, deck_id)
+  * model: card (front, back, rotation, index, deck_id)
     * belongs_to :deck
   * view: layout
-  * view: signup/login/home
+  * view: index/signup/login/home
   * view: add_deck
   * view: show_deck
   * controller: application_controller
